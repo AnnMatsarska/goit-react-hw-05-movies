@@ -3,10 +3,10 @@ import styled from 'styled-components';
 import { NavLink, Link } from 'react-router-dom';
 
 export const StyledHeader = styled.header`
-  top: 0;
-  left: 0;
-  position: sticky;
-  z-index: 1100;
+  // top: 0;
+  // left: 0;
+  // position: sticky;
+  // z-index: 1100;
 
   margin-left: auto;
   margin-right: auto;
