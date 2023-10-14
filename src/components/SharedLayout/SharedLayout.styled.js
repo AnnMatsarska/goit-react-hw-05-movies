@@ -24,3 +24,12 @@ export const StyledLinkLogo = styled(Link)`
     color: white;
   }
 `;
+
+export const StyledLink = styled(NavLink)`
+  color: black;
+  transition: all 300ms;
+
+  &::active {
+    color: white;
+  }
+`;
