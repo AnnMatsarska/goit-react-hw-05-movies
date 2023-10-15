@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Suspense, useEffect, useState } from 'react';
+import { Link, Outlet, useLocation, useParams } from 'react-router-dom';
 
 import {
   DetailsMovieWrapper,
@@ -21,6 +21,8 @@ const MoviesDetails = () => {
   const [error, setError] = useState(false);
 
   const { movieId } = useParams();
+
+  const location = useLocation();
 
   useEffect(() => {
     const getMovieById = async () => {
@@ -76,6 +78,18 @@ const MoviesDetails = () => {
             </div>
           </DetailsMovieWrapper>
           <h2>Additional information</h2>
+          <ul>
+            <li>
+              <Link to="cast">Cast</Link>
+            </li>
+            <li>
+              <Link to="reviews">Reviews</Link>
+            </li>
+          </ul>
+
+          <Suspense fallback={<Loader />}>
+            <Outlet />
+          </Suspense>
         </Container>
       </Section>
     </>
