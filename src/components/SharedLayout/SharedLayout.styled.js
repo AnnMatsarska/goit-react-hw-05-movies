@@ -34,7 +34,7 @@ export const StyledLinkLogo = styled(Link)`
 export const NavList = styled.ul`
   display: flex;
   align-items: center;
-  gap: 60px;
+  gap: 16px;
 `;
 
 export const StyledLink = styled(NavLink)`
