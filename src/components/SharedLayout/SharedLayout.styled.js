@@ -3,16 +3,16 @@ import styled from 'styled-components';
 import { NavLink, Link } from 'react-router-dom';
 
 export const StyledHeader = styled.header`
-  // top: 0;
-  // left: 0;
-  // position: sticky;
-  // z-index: 1100;
+  top: 0;
+  left: 0;
+  position: sticky;
+  z-index: 1100;
 
   margin-left: auto;
   margin-right: auto;
   padding: 5px;
 
-  background-color: rgb(227, 102, 6, 0.7);
+  background-color: rgb(239, 187, 64);
 `;
 
 export const HeaderContainer = styled.div`
