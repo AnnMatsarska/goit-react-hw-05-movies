@@ -5,4 +5,5 @@ export const Title = styled.h1`
   margin-right: auto;
   max-width: 320px;
   margin-bottom: 22px;
+  text-align: center;
 `;
