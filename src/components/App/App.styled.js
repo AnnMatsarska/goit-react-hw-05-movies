@@ -6,8 +6,8 @@ export const Container = styled.div`
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
-  //   outline: 2px solid red;
-  //   outline-offset: -2px;
+  // outline: 2px solid red;
+  // outline-offset: -2px;
 `;
 
 export const Section = styled.section`
