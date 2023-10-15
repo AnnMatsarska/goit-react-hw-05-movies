@@ -17,23 +17,23 @@ export const fetchMoviesByQuery = async (query, page = 1) => {
   return response.data;
 };
 
-export const fetchMoviesById = async movieId => {
+export const fetchMoviesById = async id => {
   const response = await axios.get(
-    `${BASE_URL}search/movie/${movieId}?api_key=${API_KEY}`
+    `${BASE_URL}/movie/${id}?api_key=${API_KEY}`
   );
   return response.data;
 };
 
 export const fetchMoviesByCredits = async movieId => {
   const response = await axios.get(
-    `${BASE_URL}search/movie/${movieId}/credits?api_key=${API_KEY}`
+    `${BASE_URL}/movie/${movieId}/credits?api_key=${API_KEY}`
   );
   return response.data;
 };
 
 export const fetchMoviesByReviews = async movieId => {
   const response = await axios.get(
-    `${BASE_URL}search/movie/${movieId}/reviews?api_key=${API_KEY}`
+    `${BASE_URL}/movie/${movieId}/reviews?api_key=${API_KEY}`
   );
   return response.data;
 };

@@ -15,7 +15,6 @@ const Home = () => {
   const [error, setError] = useState(false);
 
   useEffect(() => {
-    console.log('start rendering');
     const getTrendingMovies = async () => {
       try {
         setIsLoading(true);
@@ -28,7 +27,6 @@ const Home = () => {
       }
     };
     getTrendingMovies();
-    console.log('end rendering');
   }, []);
 
   return (
