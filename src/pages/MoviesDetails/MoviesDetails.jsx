@@ -1,5 +1,5 @@
 import { Suspense, useEffect, useState } from 'react';
-import { Link, Outlet, useParams } from 'react-router-dom';
+import { Outlet, useParams } from 'react-router-dom';
 
 import {
   DetailsMovieWrapper,
@@ -7,6 +7,8 @@ import {
   DetailsScore,
   DetailsSubTitle,
   DetailsSubText,
+  StyledAdditionalList,
+  StyledLink,
 } from './MovieDetails.styled';
 
 import { fetchMoviesById } from 'services/movie-api';
@@ -76,14 +78,14 @@ const MoviesDetails = () => {
             </div>
           </DetailsMovieWrapper>
           <h2>Additional information</h2>
-          <ul>
+          <StyledAdditionalList>
             <li>
-              <Link to="cast">Cast</Link>
+              <StyledLink to="cast">Cast</StyledLink>
             </li>
             <li>
-              <Link to="reviews">Reviews</Link>
+              <StyledLink to="reviews">Reviews</StyledLink>
             </li>
-          </ul>
+          </StyledAdditionalList>
 
           <Suspense fallback={<Loader />}>
             <Outlet />
