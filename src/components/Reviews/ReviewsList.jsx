@@ -15,7 +15,7 @@ export const ReviewsList = ({ reviews }) => {
               </p>
             </Item>
           ))
-        : 'Sorry, there are no reviews for this movie.'}
+        : 'Unfortunately, there are no reviews for this movie.'}
     </ul>
   );
 };
