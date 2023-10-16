@@ -1,5 +1,5 @@
-import { Suspense, useEffect, useState } from 'react';
-import { Outlet, useParams } from 'react-router-dom';
+import { Suspense, useEffect, useRef, useState } from 'react';
+import { Outlet, useLocation, useParams } from 'react-router-dom';
 
 import {
   DetailsMovieWrapper,
@@ -10,12 +10,13 @@ import {
   StyledAdditionalList,
   StyledLink,
 } from './MovieDetails.styled';
+import { Container, Section } from 'components/App/App.styled';
+import noImage from 'images/No-Image.svg.png';
 
 import { fetchMoviesById } from 'services/movie-api';
 import { Loader } from 'components/Loader/Loader';
 import { Error } from 'components/Error/Error';
-import { Container, Section } from 'components/App/App.styled';
-import noImage from 'images/No-Image.svg.png';
+import { GoBack } from 'components/GoBackButton/GoBack';
 
 const MoviesDetails = () => {
   const [movie, setMovie] = useState([]);
@@ -23,6 +24,8 @@ const MoviesDetails = () => {
   const [error, setError] = useState(false);
 
   const { movieId } = useParams();
+  const location = useLocation();
+  const backlinkhref = useRef(location.state?.from ?? '/movies');
 
   useEffect(() => {
     const getMovieById = async () => {
@@ -47,6 +50,7 @@ const MoviesDetails = () => {
     <>
       <Section>
         <Container>
+          <GoBack backlinkhref={backlinkhref.current} />
           {error && (
             <Error
               message={`Sorry, but the searched movie was not found. Please try again later!`}

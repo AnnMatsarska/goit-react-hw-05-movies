@@ -2,50 +2,68 @@ import styled from 'styled-components';
 
 export const Form = styled.form`
   display: flex;
-  align-items: center;
+  margin-bottom: 50px;
   width: 100%;
-  //   max-width: 600px;
-  border-radius: 50px;
-  overflow: hidden;
+  justify-content: space-between;
 `;
 
 export const Button = styled.button`
   display: inline-block;
-  margin-left: -80px;
-  width: 38px;
-  height: 38px;
-  border: none;
-  border-radius: 50px;
+  margin-left: 20px;
+  width: 80px;
+  height: 44px;
+
+  border-radius: 30px;
+  border: 1px solid #575756;
+
   background-color: transparent;
-  padding: 13px;
-  opacity: 0.6;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 12px 24px;
+
+  opacity: 0.7;
+
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
   outline: none;
 
-  &:hover {
+  &:hover,
+  &:focus {
     opacity: 1;
+    background-color: rgb(239, 187, 64, 0.7);
+    border: 1px solid transparent;
   }
 `;
 
 export const Input = styled.input`
-  display: inline-block;
-  width: 100%;
- 
-  font-size: 20px;
-background-color: rgb(239, 187, 64, 0.5);
-  
-  border: none;
+  width: 1030px;
+  padding: 12px 24px;
+
+  background-color: transparent;
+  transition: transform 250ms ease-in-out;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 1.5px;
+
+  color: #575756;
+  background-color: transparent;
+
+  border-radius: 30px;
+  border: 1px solid #575756;
   outline: none;
-  padding-left: 16px;
-  padding-right: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+
+  opacity: 0.7;
+  transition: all 250ms ease-in-out;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
 
   &::placeholder {
-  font: inherit;
-  font-size: 16px;
-}
+    color: color(#575756 a(0.8));
+    // text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 1;
   }
 `;
 

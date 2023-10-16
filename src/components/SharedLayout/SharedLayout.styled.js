@@ -44,7 +44,7 @@ export const StyledLink = styled(NavLink)`
 
   background-color: #000000;
   border: 2px solid #1a1a1a;
-  border-radius: 15px;
+  border-radius: 30px;
 
   font-size: 16px;
   font-weight: 600;
